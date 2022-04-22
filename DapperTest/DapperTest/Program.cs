@@ -1,7 +1,14 @@
+using DapperTest.BL.Implementation;
+using DapperTest.BL.Interfaces;
+using DapperTest.DAL.Implementation;
+using DapperTest.DAL.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IUserDAL, UserDAL>();
+builder.Services.AddSingleton<IUserBL, UserBL>();
 
 var app = builder.Build();
 
