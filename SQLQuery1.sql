@@ -39,3 +39,19 @@ drop table dbo.Cat
 go
 drop table if exists [Owners]
 go
+
+-- заполнение таблиц
+use DapperTestCat
+
+
+insert into [Owners] (NameOvner)
+values ( N'Ow1');
+
+insert into [Cat] (NameCat)
+values (N'Cat1');
+
+insert into [Exposition] (DateExpo, City, Country)
+values (N'mart', N'dnd', N'Country');
+
+insert into [Participants] (CatId, ExpoId)
+values (N'1', N'1');
